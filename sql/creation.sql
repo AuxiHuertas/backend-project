@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS Cities (
 CREATE TABLE IF NOT EXISTS Tourism (   
     Id_cities uuid REFERENCES  Cities NOT NULL,
     id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),
-    Art_Or_Culture TEXT NOT NULL,
+    Art_Or_Culture BOOLEAN,
     Heritage BOOLEAN, 
     Nature BOOLEAN, 
     Name_activity_done VARCHAR(100)
