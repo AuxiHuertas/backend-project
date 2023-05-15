@@ -36,12 +36,13 @@ El proyecto incluye los siguientes endpoints:
 
 ### Endpoints POST en "Cities":
 
-<!-- POST /cities --> Permite al usuario enviar las ciudades visitadas y relacionarlas con un país específico.
+<!-- POST /cities --> Permite al usuario enviar las ciudades visitadas y relacionarlas con un país específico mediante el id_country.
+
 En el objeto dentro de body de Postman, debería ir de la siguiente manera:
 
 ```js
 {
-    "id_country" : "id consultado en la tabla de Country o cities." 
+    "id_country" : "id consultado en la tabla de Country o cities." ,
     "cities_name" : "Nombre de la ciudad que el usuario haya visitado." 
 }
 ```  

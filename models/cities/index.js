@@ -2,8 +2,7 @@ const {createCities, Allcities} = require ('./queries')
 
 const postCreateCities = (db, body) => async () => {
     try {
-  
-        const response = await db.query(createCities( body))
+        const response = await db.query(createCities(body))
 
         return {
             ok: true,

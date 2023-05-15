@@ -1,5 +1,5 @@
 module.exports = {
     signin : require ('./signin'),
-    singup: require ('./singup'),
-    singout : require ('./singout')
+    signup: require ('./signup'),
+    signout : require ('./signout')
 }

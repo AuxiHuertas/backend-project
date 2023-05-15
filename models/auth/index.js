@@ -1,5 +1,6 @@
 const {isertUsers, selectByusername} = require ('./queries');
-const {hash}=require ('simple-stateless-auth-library')
+const {hash} = require ('simple-stateless-auth-library')
+const error = require('../../misc/errors')
 
 const createUsers = (db) => async (username, password) => {
     try {

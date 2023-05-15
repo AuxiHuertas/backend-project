@@ -1,4 +1,4 @@
-const { postCreateCities }= require ('../../models/cities')
+const { postCreateCities } = require ('../../models/cities')
 
 module.exports = (db) => async (req,res,next) => {
     const body = req.body

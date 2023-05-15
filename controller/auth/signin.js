@@ -12,7 +12,7 @@ module.exports = (db) => async (req,res,next) => {
     console.log(response)
 
     if(!response.ok) {
-
+        console.log(errors)
         return next(errors[response.error_code||500] )
     }   
 
