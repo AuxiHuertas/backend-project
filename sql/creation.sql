@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS Tourism (
     Art_Or_Culture BOOLEAN,
     Heritage BOOLEAN, 
     Nature BOOLEAN, 
-    Name_activity_done VARCHAR(100)
+    Name_activity_done VARCHAR(1000)
 );
 
 
