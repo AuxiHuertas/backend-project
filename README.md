@@ -74,5 +74,38 @@ El proyecto cuenta con un sistema de autenticación que incluye los siguientes e
 ``` ¡¡¡¡¡¡¡ En la autorización, hay un error que no consigo ver, no está cogiendo la cookie, ni para signin ni para signout.```
 
 Se ha utilizado la biblioteca "simple-stateless-auth-library" y JSON Web Tokens (JWT) para implementar la autenticación.
+
+## Ruta de pruebas de todos los Endpoints :
+
+1º Consultas el país con y coges el dato de "id_country": 
+<!-- GET /country --> Ves todos los países disponibles, 
+<!--GET /country/:country--> Puedes visualizar solo un país, 
+
+2º Creas una ciudad asociada al país el "id_country" que se ha tomado en el endpoint anterior, utilizando el siguiente objeto: 
+<!-- POST /cities -->
+{
+    "id_country" : "id consultado en la tabla de Country o cities." ,
+    "cities_name" : "Nombre de la ciudad que el usuario haya visitado." 
+}
+
+ 3º Creas la actividad turística realizada en la ciudad y país elegido, utilizando el siguiente objeto:
+ <!--POST /tourism: -->
+
+ {
+"id_cities": "id en el que el usuario quiere añadir una actividad, consultado con el endpoint de   cities",
+"art_or_culture": "Dato booleano, según tipo de actividad",
+"heritage":"Dato booleano, según tipo de actividad",
+"nature":"Dato booleano, según tipo de actividad",
+"name_activity_done": "campo de texto para describir el nombre de la actividad"
+}
+
+4º Puedes consultar todas las ciudades visitadas y actividades realizadas en cada país:
+<!--GET /country/:country/activity-->
+
+5º Tambien puedes consultar todas la ciudades que el usuario ha ido añadiendo con este endpoint:
+<!--GET /cities/cities -->
+
+
  
+
 
