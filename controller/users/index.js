@@ -1,4 +1,4 @@
-// module.exports = {
-//     getUser : require ('./get-user'),
+module.exports = {
+    getUser : require ('./get-user'),
 
-// }
+}

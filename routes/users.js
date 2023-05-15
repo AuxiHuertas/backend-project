@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const {authorizer} = require('../middelwares')
-const usersControllers = require ('../controller/auth/users');
+const {authorizers} = require('../middelwares')
+const usersControllers = require ('../controller/users')
 
 module.exports = () => {
-    router.get ('/',authorizer, usersControllers.getUser())
+    router.get ('/',authorizers, usersControllers.getUser())
 
     return router
 };

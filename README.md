@@ -56,7 +56,7 @@ Por ejemplo,
 
 ```js
 {
-"id_cities": " id a la que el usuario le quiere añadir una actividad, consultada con el get/cities/citites",
+"id_cities": " id en el que el usuario quiere añadir una actividad, consultado con el endpoint de cities",
 "art_or_culture": "Dato booleano, según tipo de actividad",
 "heritage":"Dato booleano, según tipo de actividad",
 "nature":"Dato booleano, según tipo de actividad",
