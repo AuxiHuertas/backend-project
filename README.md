@@ -75,35 +75,36 @@ El proyecto cuenta con un sistema de autenticación que incluye los siguientes e
 
 Se ha utilizado la biblioteca "simple-stateless-auth-library" y JSON Web Tokens (JWT) para implementar la autenticación.
 
-## Ruta de pruebas de todos los Endpoints :
+    ## Ruta de pruebas de todos los Endpoints :
 
-1º Consultas el país con y coges el dato de "id_country": 
-<!-- GET /country --> Ves todos los países disponibles, 
-<!--GET /country/:country--> Puedes visualizar solo un país, 
+    1º Consultas los datos del país y coges el dato de "id_country", puedes hacer la consulta de dos formas: 
+    <!-- GET /country -->  Ves todos los países disponibles, 
+    <!--GET /country/:country--> Puedes visualizar solo un país, 
 
-2º Creas una ciudad asociada al país el "id_country" que se ha tomado en el endpoint anterior, utilizando el siguiente objeto: 
-<!-- POST /cities -->
-{
-    "id_country" : "id consultado en la tabla de Country o cities." ,
-    "cities_name" : "Nombre de la ciudad que el usuario haya visitado." 
-}
+    2º Creas una ciudad asociada al país utilizando el "id_country" que se ha tomado en el endpoint anterior, enviando el siguiente objeto: 
+    <!-- POST /cities -->
+    {
+        "id_country" : "id consultado en la tabla de Country o cities." ,
+        "cities_name" : "Nombre de la ciudad que el usuario haya visitado." 
+    }
 
- 3º Creas la actividad turística realizada en la ciudad y país elegido, utilizando el siguiente objeto:
- <!--POST /tourism: -->
+    3º Consultas y coges el id_cities creado automaticamente con el endpoint anterior, 
+    <!--GET /cities/cities --> 
 
- {
-"id_cities": "id en el que el usuario quiere añadir una actividad, consultado con el endpoint de   cities",
-"art_or_culture": "Dato booleano, según tipo de actividad",
-"heritage":"Dato booleano, según tipo de actividad",
-"nature":"Dato booleano, según tipo de actividad",
-"name_activity_done": "campo de texto para describir el nombre de la actividad"
-}
+    3º Creas la actividad turística realizada en la ciudad creada , utilizando el id_cities y enviando el siguiente objeto:
+    <!--POST /tourism: -->
 
-4º Puedes consultar todas las ciudades visitadas y actividades realizadas en cada país:
-<!--GET /country/:country/activity-->
+    {
+    "id_cities": "id en el que el usuario quiere añadir una actividad, consultado con el endpoint de   cities",
+    "art_or_culture": "Dato booleano, según tipo de actividad",
+    "heritage":"Dato booleano, según tipo de actividad",
+    "nature":"Dato booleano, según tipo de actividad",
+    "name_activity_done": "campo de texto para describir el nombre de la actividad"
+    }
 
-5º Tambien puedes consultar todas la ciudades que el usuario ha ido añadiendo con este endpoint:
-<!--GET /cities/cities -->
+    4º Puedes consultar todas las ciudades visitadas y actividades realizadas en cada país:
+    <!--GET /country/:country/activity-->
+
 
 
  
