@@ -71,6 +71,8 @@ El proyecto cuenta con un sistema de autenticación que incluye los siguientes e
 <!--POST /signup--> : Permite a los usuarios registrarse en el sistema.
 <!--POST /signin--> : Permite a los usuarios iniciar sesión.
 <!--POST /signout--> : Permite a los usuarios cerrar sesión. 
+``` ¡¡¡¡¡¡¡ En la autorización, hay un error que no consigo ver, no está cogiendo la cookie, ni para signin ni para signout.```
+
 Se ha utilizado la biblioteca "simple-stateless-auth-library" y JSON Web Tokens (JWT) para implementar la autenticación.
  
 
