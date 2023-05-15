@@ -88,14 +88,14 @@ Se ha utilizado la biblioteca "simple-stateless-auth-library" y JSON Web Tokens 
         "cities_name" : "Nombre de la ciudad que el usuario haya visitado." 
     }
 
-    3º Consultas y coges el id_cities creado automaticamente con el endpoint anterior, 
+    3º Consultas y coges el id_cities creado automáticamente con el endpoint anterior, 
     <!--GET /cities/cities --> 
 
     3º Creas la actividad turística realizada en la ciudad creada , utilizando el id_cities y enviando el siguiente objeto:
     <!--POST /tourism: -->
 
     {
-    "id_cities": "id en el que el usuario quiere añadir una actividad, consultado con el endpoint de   cities",
+    "id_cities": "id en el que el usuario quiere añadir una actividad, consultado con el endpoint de  cities",
     "art_or_culture": "Dato booleano, según tipo de actividad",
     "heritage":"Dato booleano, según tipo de actividad",
     "nature":"Dato booleano, según tipo de actividad",
