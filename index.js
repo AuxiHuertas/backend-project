@@ -1,17 +1,18 @@
 require('dotenv').config()
 const express = require('express')
 const db = require('./config/db')
-const app = express()
 const morgan = require('morgan')
 const errors = require ('./misc/errors')
-const cookiesParser = require('cookie-parser')
+const cookieParser = require('cookie-parser')
 const uuid = require('uuid')
 
+const app = express()
+app.use(cookieParser())
 const routes = require('./routes')
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(routes(db))
-app.use(cookiesParser())
+
 
 
 app.use((req, res, next) => {
@@ -19,10 +20,11 @@ app.use((req, res, next) => {
 })
 
 app.use(({ statusCode, error }, req, res, next) => {
+    console.log(error)
    
     res.status(statusCode).json({
         success: false,
-        messasge: error.message,
+        message: error.message,
     })
 })
 

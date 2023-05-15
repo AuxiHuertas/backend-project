@@ -2,7 +2,7 @@ module.exports = (db) => async (req,res,next) => {
     const { username } =res.locals
 
     res.status(200).json({
-    succes : true,
+    success : true,
     data: {
         username,
     }
