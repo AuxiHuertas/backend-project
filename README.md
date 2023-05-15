@@ -74,6 +74,7 @@ El proyecto cuenta con un sistema de autenticación que incluye los siguientes e
 ``` ¡¡¡¡¡¡¡ En la autorización, hay un error que no consigo ver, no está cogiendo la cookie, ni para signin ni para signout.```
 
 Se ha utilizado la biblioteca "simple-stateless-auth-library" y JSON Web Tokens (JWT) para implementar la autenticación.
+
     ## Tablas
     1º Importar creation.sql
     2º Importar insert_country.sql
