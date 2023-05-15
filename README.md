@@ -70,7 +70,7 @@ El proyecto cuenta con un sistema de autenticación que incluye los siguientes e
 
 <!--POST /signup--> : Permite a los usuarios registrarse en el sistema.
 <!--POST /signin--> : Permite a los usuarios iniciar sesión.
-<!--POST /signout--> : Permite a los usuarios cerrar sesión.
+<!--POST /signout--> : Permite a los usuarios cerrar sesión. 
 Se ha utilizado la biblioteca "simple-stateless-auth-library" y JSON Web Tokens (JWT) para implementar la autenticación.
  
 
