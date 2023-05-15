@@ -1,3 +1,4 @@
 module.exports = {
-    postAllCities : require('./post-allCities')
+    postAllCities : require('./post-newCities'),
+    getAllCities : require('./get-allcities')
 }

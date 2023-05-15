@@ -32,15 +32,36 @@ El proyecto incluye los siguientes endpoints:
 
 <!-- GET /country: --> Consulta todos los países existentes.
 <!--GET /country/:country--> Consulta un país específico.
-<!--GET /country/:id/activity--> Consulta las actividades turísticas realizadas por el usuario en un país específico.
+<!--GET /country/:country/activity--> Consulta las actividades turísticas realizadas por el usuario en un país específico.
 
 ### Endpoints POST en "Cities":
 
-<!-- POST /cities: --> Permite al usuario enviar las ciudades visitadas y relacionarlas con un país específico.
+<!-- POST /cities --> Permite al usuario enviar las ciudades visitadas y relacionarlas con un país específico.
+En el objeto dentro de body de Postman, debería ir de la siguiente manera:
+
+```js
+{
+    "id_country" : "id consultado en la tabla de Country o cities." 
+    "cities_name" : "Nombre de la ciudad que el usuario haya visitado." 
+}
+```  
+<!--GET /cities/cities --> Permite consultar todas las ciudades añadidas por el usuario . 
+
 
 ### Endpoints POST en "Tourism":
 
 <!--POST /tourism: --> Permite al usuario enviar información sobre las actividades turísticas realizadas en una ciudad específica.
+Por ejemplo,
+
+```js
+{
+"id_cities": " id a la que el usuario le quiere añadir una actividad, consultada con el get/cities/citites",
+"art_or_culture": "Dato booleano, según tipo de actividad",
+"heritage":"Dato booleano, según tipo de actividad",
+"nature":"Dato booleano, según tipo de actividad",
+"name_activity_done": "campo de texto para describir el nombre de la actividad"
+}
+``` 
 
 
 ## Autenticación
